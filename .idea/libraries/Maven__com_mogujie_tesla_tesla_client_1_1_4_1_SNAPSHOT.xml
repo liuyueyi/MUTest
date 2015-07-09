@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.mogujie.tesla:tesla-client:1.1.4.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-client/1.1.4.1-SNAPSHOT/tesla-client-1.1.4.1-20150707.132656-10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-client/1.1.4.1-SNAPSHOT/tesla-client-1.1.4.1-20150707.132656-10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-client/1.1.4.1-SNAPSHOT/tesla-client-1.1.4.1-20150707.132656-10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

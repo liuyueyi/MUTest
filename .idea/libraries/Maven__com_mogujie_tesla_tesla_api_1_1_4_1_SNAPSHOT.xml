@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.mogujie.tesla:tesla-api:1.1.4.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-api/1.1.4.1-SNAPSHOT/tesla-api-1.1.4.1-20150707.132637-17.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-api/1.1.4.1-SNAPSHOT/tesla-api-1.1.4.1-20150707.132637-17-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mogujie/tesla/tesla-api/1.1.4.1-SNAPSHOT/tesla-api-1.1.4.1-20150707.132637-17-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

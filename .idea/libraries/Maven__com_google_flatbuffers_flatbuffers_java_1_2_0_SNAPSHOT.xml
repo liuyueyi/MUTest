@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.flatbuffers:flatbuffers-java:1.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/flatbuffers/flatbuffers-java/1.2.0-SNAPSHOT/flatbuffers-java-1.2.0-20150525.092055-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/flatbuffers/flatbuffers-java/1.2.0-SNAPSHOT/flatbuffers-java-1.2.0-20150525.092055-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/flatbuffers/flatbuffers-java/1.2.0-SNAPSHOT/flatbuffers-java-1.2.0-20150525.092055-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
