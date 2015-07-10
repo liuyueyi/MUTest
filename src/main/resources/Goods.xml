@@ -2,8 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mogu.hui.Goods">
-<select id="selectUserByID" parameterType="int" resultType="Goods">
-    select * from goods where id = #{id}
+<mapper namespace="mogu.hui.GoodsMapper">
+    <!-- 表字段与属性的映射 -->
+    <resultMap type="Goods" id="GoodsMapper">
+        <id property="id" column="ID"/>
+        <result property="categoryId" column="CATEGORY_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="price" column="PRICE"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="account" column="ACCOUNT"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+    </resultMap>
+    <select id="getGoodsById" parameterType="int" resultType="Goods" resultMap="GoodsMapper">
+    select * from goods where ID = #{id}
 </select>
+    <select id="getGoodsByName" parameterType="String" resultType="Goods" resultMap="GoodsMapper">
+        select * from goods where NAME = #{name}
+    </select>
+    <select id="getNameById" parameterType="int" resultType="String" resultMap="GoodsMapper">
+        select NAME from goods where ID=#{id}
+    </select>
 </mapper>

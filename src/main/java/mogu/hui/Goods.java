@@ -70,4 +70,11 @@ public class Goods {
     public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString(){
+        return "id: " + id + " categoryId: " + categoryId + " name: " + name
+                + " price: " + price + " description: " + description
+                + " acount: " + acount + " updateTime: " + updateTime;
+    }
 }

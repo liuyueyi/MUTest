@@ -4,6 +4,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Reader;
 
@@ -24,9 +25,14 @@ public class GoodsTest {
             System.out.println("2");
             SqlSession session = ssf.openSession();
             System.out.println("3");
-            Goods goods = (Goods)session.selectOne("selectUserByID", 1);
+            Goods goods = (Goods)session.selectOne("getGoodsById", 2);
             System.out.println("4");
             System.out.println(goods.getName());
+
+            GoodsMapper mapper = session.getMapper(GoodsMapper.class);
+            Goods g = mapper.getGoodsById(1);
+            System.out.println(g.toString());
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
