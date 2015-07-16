@@ -3,6 +3,8 @@ package mogu.hui;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by yihui on 15/7/9.
  *
@@ -16,4 +18,6 @@ public interface GoodsMapper {
     public Goods getGoodsByName(String name);
 
     public String getNameById(int id);
+
+    public List<Goods> dynamicForeachTest(List<Integer> ids);
 }
