@@ -12,7 +12,7 @@ public class Goods {
     private String name;
     private float price;
     private String description;
-    private int acount;
+    private int account;
     private Timestamp updateTime;
 
     public int getId() {
@@ -55,12 +55,12 @@ public class Goods {
         this.description = description;
     }
 
-    public int getAcount() {
-        return acount;
+    public int getAccount() {
+        return account;
     }
 
-    public void setAcount(int acount) {
-        this.acount = acount;
+    public void setAccount(int acount) {
+        this.account = acount;
     }
 
     public Timestamp getUpdateTime() {
@@ -75,6 +75,6 @@ public class Goods {
     public String toString(){
         return "id: " + id + " categoryId: " + categoryId + " name: " + name
                 + " price: " + price + " description: " + description
-                + " acount: " + acount + " updateTime: " + updateTime;
+                + " acount: " + account + " updateTime: " + updateTime;
     }
 }

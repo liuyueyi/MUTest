@@ -20,4 +20,9 @@ public interface GoodsMapper {
     public String getNameById(int id);
 
     public List<Goods> dynamicForeachTest(List<Integer> ids);
+
+    public Integer addGood(Goods good);
+
+    public Integer deleteGoodById(int id);
+    public Integer deleteGoodByName(String name);
 }

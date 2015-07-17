@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+<!-- 命名空间非常重要，不能有错，必须与我们定义的package 和 接口一致。如果不一致就会出错 -->
 <mapper namespace="mogu.hui.GoodsMapper">
     <!-- 表字段与属性的映射 -->
     <resultMap type="Goods" id="GoodsMapper">
         <id property="id" column="ID"/>
         <result property="categoryId" column="CATEGORY_ID"/>
-        <result property="name" column="NAME"/>
+        <result property="name" column="GOODS_NAME"/>
         <result property="price" column="PRICE"/>
         <result property="description" column="DESCRIPTION"/>
         <result property="account" column="ACCOUNT"/>
         <result property="updateTime" column="UPDATE_TIME"/>
     </resultMap>
     <select id="getGoodsById" parameterType="int" resultType="Goods" resultMap="GoodsMapper">
-    select * from goods where ID = #{id}
-</select>
+        select * from goods where id = #{id}
+    </select>
     <select id="getGoodsByName" parameterType="String" resultType="Goods" resultMap="GoodsMapper">
-        select * from goods where NAME = #{name}
+        select * from goods where name = #{name}
     </select>
     <select id="getNameById" parameterType="int" resultType="String" resultMap="GoodsMapper">
-        select NAME from goods where ID=#{id}
+        select NAME from goods where id=#{id}
     </select>
     <!-- foreach的教材，可以参考http://blog.csdn.net/truong/article/details/17270945
      item表示集合中每一个元素进行迭代时的别名，
@@ -30,8 +30,22 @@
      -->
     <select id="dynamicForeachTest" resultType="Goods" resultMap="GoodsMapper">
         select * from goods where ID in
-        <foreach collection="list" index="index" item="item" open="(" separator="," close=")" >
+        <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
             #{item}
         </foreach>
     </select>
+    <!--
+     seGeneratedKeys设置为"true"表明要MyBatis获取由数据库自动生成的主键；
+     keyProperty="id"指定把获取到的主键值注入到Student的id属性
+    -->
+    <insert id="addGood" parameterType="Goods" useGeneratedKeys="true" keyProperty="id" >
+        insert into goods(category_id, name, price, description) values(#{categoryId}, #{name}, #{price}, #{description})
+    </insert>
+
+    <delete id="deleteGoodById" parameterType="int">
+        delete from goods where id=#{id}
+    </delete>
+    <delete id="deleteGoodByName" parameterType="String">
+        delete from goods where name=#{name}
+    </delete>
 </mapper>
